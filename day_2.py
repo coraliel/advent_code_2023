@@ -35,7 +35,7 @@ def get_possible_games(all_games):
         valid = True
         for colour, number in inputs.items():
             print(colour, number)
-            if colour in g and any(number <= int(num) for num in g[colour]):
+            if colour in g and any(number < int(num) for num in g[colour]):
                 valid = False
                 continue
         if valid:
